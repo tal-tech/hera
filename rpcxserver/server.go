@@ -11,12 +11,12 @@ import (
 	"syscall"
 	"time"
 
-	logger "github.com/tal-tech/loggerX"
-	rpcxplugin "github.com/tal-tech/xesMicroPlugin"
-	"github.com/tal-tech/hera/bootstrap"
-	"github.com/tal-tech/xtools/confutil"
 	"github.com/smallnest/rpcx/protocol"
 	"github.com/smallnest/rpcx/server"
+	"github.com/tal-tech/hera/bootstrap"
+	logger "github.com/tal-tech/loggerX"
+	rpcxplugin "github.com/tal-tech/odinPlugin"
+	"github.com/tal-tech/xtools/confutil"
 )
 
 //Server struct
