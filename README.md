@@ -1,17 +1,19 @@
+## Hera
+[[开发文档]](https://www.yuque.com/tal-tech/hera)
+
 ### 简介
 ----
-Hera is a service incubator, which is gradually summarized and refined in the practice of Dapan integration project. The main goal is to integrate some commonly used service components and their usage methods to form a reusable service generation component.
-It greatly reduces the general configuration and initialization work of developers when creating services, freeing us from the duplication of quagmire!
+Hera为一个服务孵化器，旨在快速创建适合自己的服务框架，Hera来帮助开发者解决服务本身需要考虑的服务治理、监控、插件等等，开发者可以自己的风格打造属于自己的专属服务框架，在开发过程中大大减少了开发人员在创建服务时的通用配置和初始化工作，让开发者从重复的泥潭里解脱出来！
 
-Currently has the following functions:
+Hera目前拥有如下孵化能力:
 
-> * Service func hooks
+* 孵化Web框架服务
 
-> * Gin Web Framework Process Management
+* 孵化Kafka消费服务
 
-> * Kafka consumer
+* 孵化RPC服务
 
-> * Rpcx Server Wraper
+* 孵化Job服务
 
-
-[详细文档//todo]
+同时Hera为服务提供了灵活的hook
+* 服务启动hook 
