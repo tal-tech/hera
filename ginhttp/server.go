@@ -122,6 +122,7 @@ func (s *Server) InitConfig() bootstrap.BeforeServerStartFunc {
 		s.server.WriteTimeout = s.opts.WriteTimeout
 		s.server.IdleTimeout = s.opts.IdleTimeout
 		if s.opts.Mode != "" {
+			os.Setenv(gin.EnvGinMode, s.opts.Mode)
 			gin.SetMode(s.opts.Mode)
 		}
 		return nil
