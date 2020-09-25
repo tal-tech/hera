@@ -20,7 +20,7 @@ func InitLogger() BeforeServerStartFunc {
 
 func InitLoggerWithConf(sections ...string) BeforeServerStartFunc {
 	return func() error {
-		section := "log"
+		section := "Log"
 		if len(sections) > 0 {
 			section = sections[0]
 		}
