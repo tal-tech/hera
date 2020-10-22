@@ -3,7 +3,6 @@ package ginhttp
 import (
 	"net/http"
 	"runtime/debug"
-	"runtime"
 	logger "github.com/tal-tech/loggerX"
 	"github.com/jpillora/overseer"
 	"github.com/spf13/cast"
@@ -23,9 +22,7 @@ func graceStart(addr string, s *http.Server) {
 	if expvarutil.ExpvarPort != "" {
 		addresses = append(addresses, expvarutil.ExpvarPort)
 	}
-	if runtime.GOOS != "windows" { 
-		oversee()
-	}
+	oversee()
 }
 
 func oversee() {
