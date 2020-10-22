@@ -7,7 +7,7 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
-
+	"runtime"
 	logger "github.com/tal-tech/loggerX"
 	"github.com/tal-tech/hera/bootstrap"
 	"github.com/tal-tech/xtools/confutil"
@@ -49,7 +49,7 @@ func (s *Server) Serve() error {
 		}
 	}
 
-	if s.opts.Grace {
+	if s.opts.Grace && runtime.GOOS != "windows" {
 		graceStart(s.opts.Addr, s.server)
 	} else {
 		signal.Notify(s.exit, os.Interrupt, syscall.SIGTERM)
