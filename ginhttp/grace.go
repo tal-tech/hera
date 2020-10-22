@@ -23,8 +23,9 @@ func graceStart(addr string, s *http.Server) {
 	if expvarutil.ExpvarPort != "" {
 		addresses = append(addresses, expvarutil.ExpvarPort)
 	}
-
-	oversee()
+	if runtime.GOOS != "windows" { 
+		oversee()
+	}
 }
 
 func oversee() {
